@@ -444,7 +444,8 @@ img {
   max-width: 264px;
 }
 
-.footer-soc-title {
+.footer-soc-title,
+.footer-subscribe-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -485,6 +486,73 @@ img {
   fill: var(--light);
 }
 
+.footer-social {
+  margin-right: 80px;
+}
+
+.footer-subscribe-form {
+  display: flex;
+}
+
+.footer-email-input {
+  min-width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  margin-right: 24px;
+  background-color: transparent;
+  border: 1px solid var(--white-background);
+  border-radius: 4px;
+  color: var(--white-background);
+  transition: border-color var(--transition);
+}
+
+.footer-email-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--white-background);
+}
+
+.footer-email-input:hover,
+.footer-email-input:focus {
+  border-color: var(--primary-brand);
+}
+
+.sub-btn {
+  min-width: 165px;
+  padding: 8px 24px;
+  background: var(--primary-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-background);
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn-wrapper {
+  position: relative;
+}
+
+.sub-icon {
+  position: absolute;
+  left: 117px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--white-background);
+}
+
+.sub-btn:hover,
+.sub-btn:focus {
+  background-color: var(--pressed-state);
+}
+
 /***-------MODAL-------***/
 .backdrop {
   position: fixed;
@@ -500,6 +568,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition);
   width: 408px;
@@ -552,6 +621,140 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.modal-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--dark);
+}
+
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding: 11px 16px 11px 38px;
+  border: 1px solid var(--modal-overlay);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color var(--transition);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill var(--transition);
+}
+
+.modal-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+}
+
+.modal-textarea {
+  height: 120px;
+  padding-left: 16px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+.modal-input:hover,
+.modal-input:focus,
+.modal-textarea:hover,
+.modal-textarea:focus {
+  border-color: var(--primary-brand);
+}
+
+.modal-input:hover + .input-icon,
+.modal-input:focus + .input-icon {
+  fill: var(--primary-brand);
+}
+
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-overlay);
+}
+
+.modal-checkbox-text {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+  margin-bottom: 24px;
+}
+
+.modal-checkbox-text a {
+  color: var(--primary-brand);
+}
+
+.modal-checkbox-text span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid var(--modal-overlay);
+  border-radius: 2px;
+  fill: transparent;
+  transition: background-color var(--transition), border-color var(--transition),
+    fill var(--transition);
+}
+
+.modal-policy-check:checked + .modal-checkbox-text span {
+  background-color: var(--pressed-state);
+  border: none;
+  fill: var(--white-background);
+}
+
+.modal-policy-check:hover + .modal-checkbox-text span,
+.modal-policy-check:focus + .modal-checkbox-text span {
+  border-color: var(--primary-brand);
+}
+
+.modal-submit-button {
+  display: block;
+  min-width: 169px;
+  padding: 16px 32px;
+  margin: 0 auto;
+  background: var(--primary-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-background);
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.modal-submit-button:hover,
+.modal-submit-button:focus {
+  background-color: var(--pressed-state);
 }
 
 /*********------------PORTFOLIO-PAGE-----------*********/
