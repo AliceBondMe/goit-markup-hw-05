@@ -487,7 +487,7 @@ img {
 }
 
 .footer-social {
-  margin-right: 80px;
+  margin-right: auto;
 }
 
 .footer-subscribe-form {
@@ -499,7 +499,6 @@ img {
   width: 264px;
   height: 40px;
   padding: 8px 16px;
-  margin-right: 24px;
   background-color: transparent;
   border: 1px solid var(--white-background);
   border-radius: 4px;
